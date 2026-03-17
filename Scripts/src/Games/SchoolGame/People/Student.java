@@ -1,0 +1,21 @@
+package Games.SchoolGame.People;
+
+public class Student extends Person {
+    public static int numberOfStudents = 0;
+    public static final int MAX_GRADE = 12;
+    int studentId;
+    int gradeLevel;
+    public Student(String name, int gradeLevel){
+        super(name);
+        this.gradeLevel = gradeLevel;
+        studentId = numberOfStudents;
+        numberOfStudents++;
+    }
+    public static int generateGradeLevel(){
+        return (int) (Math.random() * MAX_GRADE);
+    }
+    @Override
+    public String info(){
+        return super.info() + " is a student with an id of " + studentId + " and is in grade level " + gradeLevel;
+    }
+}

@@ -1,4 +1,4 @@
-package Games.CoinToss;
+package Games.Casino;
 
 public class Player {
     public final int STARTING_MONEY = 100;

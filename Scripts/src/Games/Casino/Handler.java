@@ -1,4 +1,4 @@
-package Games.CoinToss;
+package Games.Casino;
 
 import java.util.Scanner;
 

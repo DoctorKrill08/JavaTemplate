@@ -1,4 +1,4 @@
-package Games.CoinToss;
+package Games.Casino;
 
 public class CoinTossGame {
     public final double ODDS_OF_WINNING_COIN_TOSS = 0.5;

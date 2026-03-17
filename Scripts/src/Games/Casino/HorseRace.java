@@ -1,4 +1,4 @@
-package Games.CoinToss;
+package Games.Casino;
 
 public class HorseRace {
     public final int MONEY_MULTIPLIER = 2;

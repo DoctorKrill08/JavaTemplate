@@ -1,4 +1,4 @@
-package Games.CoinToss;
+package Games.Casino;
 
 public class Casino {
     public enum Game{
@@ -23,5 +23,24 @@ public class Casino {
                 return horseRace.betOnHorse(money);
         }
         return money;
+    }
+
+
+
+
+
+
+
+
+    public int monopolyMovement(){
+        int dice1 = (int) (Math.random() * 6);
+        int dice2 = (int) (Math.random() * 6);
+        //Reroll on doubles
+        if (dice1 == dice2) {
+            dice1 = dice1 + (int) (Math.random() * 6);
+            dice2 = dice2 + (int) (Math.random() * 6);
+        }
+        //Total tiles moved
+        return dice1 + dice2;
     }
 }
