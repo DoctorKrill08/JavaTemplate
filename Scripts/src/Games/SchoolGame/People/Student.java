@@ -8,9 +8,9 @@ public class Student extends Person {
     public static Student generate(){
         int gradeLevel = generateGradeLevel();
         if (gradeLevel >= 9) {
-            return HighSchoolStudent.generateHighSchoolStudent();
+            return HighSchoolStudent.generateHighSchoolStudent(gradeLevel);
         }else{
-            return new Student(generateName(),generateGradeLevel());
+            return new Student(generateName(),gradeLevel);
         }
     }
     public Student(String name, int gradeLevel){
@@ -20,7 +20,7 @@ public class Student extends Person {
         numberOfStudents++;
     }
     public static int generateGradeLevel(){
-        return (int) (Math.random() * MAX_GRADE);
+        return (int) (Math.random() * MAX_GRADE) + 1;
     }
     @Override
     public String info(){
