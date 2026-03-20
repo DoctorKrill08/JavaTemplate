@@ -5,6 +5,14 @@ public class Student extends Person {
     public static final int MAX_GRADE = 12;
     int studentId;
     int gradeLevel;
+    public static Student generate(){
+        int gradeLevel = generateGradeLevel();
+        if (gradeLevel >= 9) {
+            return HighSchoolStudent.generateHighSchoolStudent();
+        }else{
+            return new Student(generateName(),generateGradeLevel());
+        }
+    }
     public Student(String name, int gradeLevel){
         super(name);
         this.gradeLevel = gradeLevel;

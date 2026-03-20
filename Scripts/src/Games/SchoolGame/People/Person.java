@@ -12,19 +12,20 @@ public class Person {
             "qelnweflkwn",
             "Alicia",
             "Sally",
-            "HelpMeHelpmeHelpme",
-            "camelCase",
-            "words fr"
+            "HelpMeHelpmeHelpme"
     };
+    public static Person generate(){
+        return new Person(generateName());
+    }
+    public static String generateName(){
+        int randomNumber = (int) (Math.random() * NAMES.length);
+        return NAMES[randomNumber];
+    }
     String name;
     public Person(String name){
         this.name = name;
     }
     public String info(){
         return "Person " + name;
-    }
-    public static String generateName(){
-        int randomNumber = (int) (Math.random() * NAMES.length);
-        return NAMES[randomNumber];
     }
 }

@@ -13,10 +13,10 @@ public class School {
     public School(String name, int numberOfStudents, int numberOfTeachers){
         this.name = name;
         for (int i = 0; i < numberOfStudents; i++){
-            students.add(new Student(Person.generateName(),Student.generateGradeLevel()));
+            students.add(Student.generate());
         }
         for (int i = 0; i < numberOfTeachers; i++){
-            teachers.add(new Teacher(Person.generateName(), Teacher.generateTopic()));
+            teachers.add(Teacher.generate());
         }
     }
     public void status(){
@@ -25,13 +25,11 @@ public class School {
         System.out.println(teachers.size() + " teachers in this school" + "\n");
         System.out.println(" --- STUDENTS ---");
         for (int i = 0; i < students.size(); i++){
-            Student student = students.get(i);
-            System.out.println(student.info());
+            System.out.println(students.get(i).info());
         }
         System.out.println(" --- TEACHERS ---");
         for (int i = 0; i < teachers.size(); i++){
-            Teacher teacher = teachers.get(i);
-            System.out.println(teacher.info());
+            System.out.println(teachers.get(i).info());
         }
     }
 }
