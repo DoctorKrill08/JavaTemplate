@@ -35,4 +35,5 @@ public class HighSchoolStudent extends Student {
     public String info(){
         return super.info() + " and is a " + gradeToString() + " in high school with a gpa of " + gpa;
     }
+
 }
